@@ -14,6 +14,9 @@
 
   <title>Rent4u</title>
 
+  <link rel="stylesheet" href="../dist/css/qrcode-reader.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
   <!-- slider stylesheet -->
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
@@ -30,6 +33,18 @@
 </head>
 
 <body>
+<form>
+
+  <label for="single">Single input (rebound click, depending on target input's content):</label> 
+  <input id="single2" type="text" size="50"> 
+  <button type="button" id="openreader-single2" 
+    data-qrr-target="#single2" 
+    data-qrr-audio-feedback="true">Read or follow QRCode</button>
+  <br>
+  <br>
+</form>
+
+
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
@@ -778,6 +793,43 @@
   </script>
   <script src="js/custom.js"></script>
 
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../dist/js/qrcode-reader.min.js?v=20190604"></script>
+  
+  <script>
+    
+    $(function(){
+  
+      // overriding path of JS script and audio 
+      $.qrCodeReader.jsQRpath = "../dist/js/jsQR/jsQR.min.js";
+      $.qrCodeReader.beepPath = "../dist/audio/beep.mp3";
+  
+      // bind all elements of a given class
+      $(".qrcode-reader").qrCodeReader();
+  
+      // bind elements by ID with specific options
+      $("#openreader-multi2").qrCodeReader({multiple: true, target: "#multiple2", skipDuplicates: false});
+      $("#openreader-multi3").qrCodeReader({multiple: true, target: "#multiple3"});
+  
+      // read or follow qrcode depending on the content of the target input
+      $("#openreader-single2").qrCodeReader({callback: function(code) {
+        if (code) {
+          window.location.href = code;
+        }  
+      }}).off("click.qrCodeReader").on("click", function(){
+        var qrcode = $("#single2").val().trim();
+        if (qrcode) {
+          window.location.href = qrcode;
+        } else {
+          $.qrCodeReader.instance.open.call(this);
+        }
+      });
+  
+  
+    });
+  
+  </script>
 
 </body>
 
