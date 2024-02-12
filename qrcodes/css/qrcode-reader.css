@@ -17,11 +17,14 @@
   left: 0;
   right: 0;
   bottom: 0;
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(-5%, 0%);
   background: white;
   padding: 10px;
-  width: 90%;
-  height: 90%;
-  margin: auto;
+  width: 75%;
+  height: 60%;
+  margin: 5% auto;
   display: none;
   z-index: 20001;
   border-radius: 10px;

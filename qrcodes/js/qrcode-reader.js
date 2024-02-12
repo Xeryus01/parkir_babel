@@ -84,7 +84,7 @@
     buildHTML: function() {
 
       qrr.bgOverlay = $('<div id="qrr-overlay"></div>');
-      qrr.container = $('<div id="qrr-container"></div>');
+      qrr.container = $('<div id="qrr-container" class="mx-auto"></div>');
       
       qrr.closeBtn = $('<span id="qrr-close">&times;</span>')
       qrr.closeBtn.appendTo(qrr.container);

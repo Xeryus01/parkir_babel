@@ -35,7 +35,7 @@
 <body>
 <form>
   <label for="single">Scan QR Code:</label> 
-  <input id="single2" type="text" size="50" hidden="true"> 
+  <input id="single2" type="text" hidden="true"> 
   <button type="button" id="openreader-single2" 
     data-qrr-target="#single2" 
     data-qrr-audio-feedback="true">Read or follow QRCode</button>
@@ -802,9 +802,6 @@
       $.qrCodeReader.jsQRpath = "../qrcodes/js/jsQR/jsQR.min.js";
       $.qrCodeReader.beepPath = "../qrcodes/audio/beep.mp3";
   
-      // bind all elements of a given class
-      $(".qrcode-reader").qrCodeReader();
-  
       // read or follow qrcode depending on the content of the target input
       $("#openreader-single2").qrCodeReader({callback: function(code) {
         if (code) {
@@ -818,7 +815,6 @@
           $.qrCodeReader.instance.open.call(this);
         }
       });
-  
   
     });
   
