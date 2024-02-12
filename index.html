@@ -22,34 +22,6 @@
         data-qrr-audio-feedback="true">Read or follow QRCode</button>
     <br>
     </form>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="../qrcodes/js/qrcode-reader.min.js?v=20190604"></script>
-
-    <script>
-    $(function(){
-
-        // overriding path of JS script and audio 
-        $.qrCodeReader.jsQRpath = "../qrcodes/js/jsQR/jsQR.min.js";
-        $.qrCodeReader.beepPath = "../qrcodes/audio/beep.mp3";
-
-        // read or follow qrcode depending on the content of the target input
-        $("#openreader-single2").qrCodeReader({callback: function(code) {
-        if (code) {
-            window.location.href = code;
-        }  
-        }}).off("click.qrCodeReader").on("click", function(){
-        var qrcode = $("#single2").val().trim();
-        if (qrcode) {
-            window.location.href = qrcode;
-        } else {
-            $.qrCodeReader.instance.open.call(this);
-        }
-        });
-
-    });
-
-    </script>
     
     <header class="foi-header landing-header">
         <div class="container">
@@ -533,6 +505,35 @@
     <script src="assets/vendors/jquery/jquery.min.js"></script>
     <script src="assets/vendors/popper.js/popper.min.js"></script>
     <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../qrcodes/js/qrcode-reader.min.js?v=20190604"></script>
+
+    <script>
+    $(function(){
+
+        // overriding path of JS script and audio 
+        $.qrCodeReader.jsQRpath = "../qrcodes/js/jsQR/jsQR.min.js";
+        $.qrCodeReader.beepPath = "../qrcodes/audio/beep.mp3";
+
+        // read or follow qrcode depending on the content of the target input
+        $("#openreader-single2").qrCodeReader({callback: function(code) {
+        if (code) {
+            window.location.href = code;
+        }  
+        }}).off("click.qrCodeReader").on("click", function(){
+        var qrcode = $("#single2").val().trim();
+        if (qrcode) {
+            window.location.href = qrcode;
+        } else {
+            $.qrCodeReader.instance.open.call(this);
+        }
+        });
+
+    });
+
+    </script>
 </body>
 
 </html>
