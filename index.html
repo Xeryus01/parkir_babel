@@ -1,825 +1,538 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FOI App Landing Page</title>
+    <link rel="stylesheet" href="assets/vendors/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-  <title>Rent4u</title>
-
-  <link rel="stylesheet" href="../qrcodes/css/qrcode-reader.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet">
-
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../qrcodes/css/qrcode-reader.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 </head>
 
 <body>
-<form>
-  <label for="single">Scan QR Code:</label> 
-  <input id="single2" type="text" hidden="true"> 
-  <button type="button" id="openreader-single2" 
-    data-qrr-target="#single2" 
-    data-qrr-audio-feedback="true">Read or follow QRCode</button>
-  <br>
-</form>
+    <form>
+    <label for="single">Scan QR Code:</label> 
+    <input id="single2" type="text" hidden="true"> 
+    <button type="button" id="openreader-single2" 
+        data-qrr-target="#single2" 
+        data-qrr-audio-feedback="true">Read or follow QRCode</button>
+    <br>
+    </form>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../qrcodes/js/qrcode-reader.min.js?v=20190604"></script>
 
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg custom_nav-container">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              Rent4u
-            </span>
-          </a>
-
-          <div class="navbar-collapse" id="">
-            <div class="user_option">
-              <a href="">
-                Login
-              </a>
-            </div>
-            <div class="custom_menu-btn">
-              <button onclick="openNav()">
-                <span class="s-1"> </span>
-                <span class="s-2"> </span>
-                <span class="s-3"> </span>
-              </button>
-            </div>
-            <div id="myNav" class="overlay">
-              <div class="overlay-content">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="car.html">Cars</a>
-                <a href="blog.html">Blog</a>
-                <a href="contact.html">Contact Us</a>
-                <a href="#">Login</a>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class=" slider_section position-relative">
-      <div class="slider_container">
-        <div class="img-box">
-          <img src="images/hero-img.jpg" alt="">
-        </div>
-        <div class="detail_container">
-          <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <div class="detail-box">
-                  <h1>
-                    Rent Car <br>
-                    Experts <br>
-                    Service
-                  </h1>
-                  <a href="">
-                    Contact Us
-                  </a>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="detail-box">
-                  <h1>
-                    Rent Car <br>
-                    Experts <br>
-                    Service
-                  </h1>
-                  <a href="">
-                    Contact Us
-                  </a>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="detail-box">
-                  <h1>
-                    Rent Car <br>
-                    Experts <br>
-                    Service
-                  </h1>
-                  <a href="">
-                    Contact Us
-                  </a>
-                </div>
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-
-        </div>
-      </div>
-    </section>
-    <!-- end slider section -->
-  </div>
-  <!-- book section -->
-  <section class="book_section">
-    <div class="form_container">
-      <form action="">
-        <div class="form-row">
-          <div class="col-lg-8">
-            <div class="form-row">
-              <div class="col-md-6">
-                <label for="parkingName">Pick Up Locaion</label>
-                <input type="text" class="form-control" placeholder="acb ">
-              </div>
-              <div class="col-md-6">
-                <label for="parkingNumber">Drop Location</label>
-                <input type="text" class="form-control" placeholder="acb ">
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="col-md-6">
-                <label for="parkingName">Pick Up Date</label>
-                <input type="text" class="form-control" placeholder="07/09/2020">
-              </div>
-              <div class="col-md-6">
-                <label for="parkingNumber">Return Date</label>
-                <input type="text" class="form-control" placeholder="07/09/2020">
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4">
-            <div class="btn-container">
-              <button type="submit" class="">
-                Search
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </form>
-    </div>
-    <div class="img-box">
-      <img src="images/book-car.png" alt="">
-    </div>
-  </section>
-
-  <!-- end book section -->
-
-  <!-- car section -->
-
-  <section class="car_section layout_padding2-top layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Better Way For Find Your Favourite Cars
-        </h2>
-        <p>
-          It is a long established fact that a reader will be distracted by the readable
-        </p>
-      </div>
-      <div class="car_container">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/c-1.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Choose Your Car
-            </h5>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/c-2.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Get Your Car
-            </h5>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/c-3.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Contact Your Dealer
-            </h5>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end car section -->
-
-  <!-- about section -->
-
-  <section class="about_section layout_padding-bottom">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-7 px-0">
-          <div class="img-box">
-            <img src="images/about-img.png" alt="">
-          </div>
-        </div>
-        <div class="col-md-4 col-lg-3">
-          <div class="detail-box">
-            <h2>
-              About Our Cars
-            </h2>
-            <p>
-              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-            </p>
-            <a href="">
-              Read More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end about section -->
-
-
-  <!-- best section -->
-
-  <section class="best_section">
-    <div class="container">
-      <div class="book_now">
-        <div class="detail-box">
-          <h2>
-            Our Best Cars
-          </h2>
-          <p>
-            It is a long established fact that a reader will be distracted by the
-          </p>
-        </div>
-        <div class="btn-box">
-          <a href="">
-            Book Now
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end best section -->
-
-  <!-- rent section -->
-
-  <section class="rent_section layout_padding">
-    <div class="container">
-      <div class="rent_container">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-1.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-2.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-3.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-4.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-5.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/r-6.png" alt="">
-          </div>
-          <div class="price">
-            <a href="">
-              Rent $200
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          See More
-        </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- end rent section -->
-
-  <!-- blog section -->
-
-  <section class="blog_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Our Latest Blog
-        </h2>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-        </p>
-      </div>
-    </div>
-    <div class="blog_container">
-      <div class="layout_padding2-top">
-        <div class="carousel-wrap ">
-          <div class="owl-carousel">
-            <div class="item">
-              <div class="box">
-                <div class="date-box">
-                  <h6>
-                    04 Nov 2019
-                  </h6>
-                </div>
-                <div class="img-box">
-                  <img src="images/b-1.jpg" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Vintage
-                  </h5>
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable The point of using Lorem </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="date-box">
-                  <h6>
-                    04 Nov 2019
-                  </h6>
-                </div>
-                <div class="img-box">
-                  <img src="images/b-2.jpg" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Steering wheels
-                  </h5>
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable The point of using Lorem </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="date-box">
-                  <h6>
-                    04 Nov 2019
-                  </h6>
-                </div>
-                <div class="img-box">
-                  <img src="images/b-3.jpg" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Buick Car
-                  </h5>
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable The point of using Lorem </p>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="date-box">
-                  <h6>
-                    04 Nov 2019
-                  </h6>
-                </div>
-                <div class="img-box">
-                  <img src="images/b-2.jpg" alt="">
-                </div>
-                <div class="detail-box">
-                  <h5>
-                    Steering wheels
-                  </h5>
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable The point of using Lorem </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end blog section -->
-
-  <!-- us section -->
-
-  <section class="us_section">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Why choose Us
-        </h2>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-        </p>
-      </div>
-    </div>
-    <div class="us_container layout_padding2">
-      <div class="content_box">
-        <div class="box">
-          <div class="img-box">
-            <img src="images/u-1.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Low Rent
-            </h5>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/u-2.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Fast Car
-            </h5>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/u-3.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Safe Car
-            </h5>
-          </div>
-        </div>
-        <div class="box">
-          <div class="img-box">
-            <img src="images/u-4.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h5>
-              Quick Support
-            </h5>
-          </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          Read More
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- end us section -->
-
-  <!-- client section -->
-
-  <section class="client_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          What Is say Customer
-        </h2>
-        <p>
-          It is a long established fact that a reader will be distracted by the
-        </p>
-      </div>
-      <div class="layout_padding2-top">
-        <div class="carousel-wrap ">
-          <div class="owl-carousel">
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
-                </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="images/client-1.png" alt="" class="img-1">
-                    <img src="images/client-1-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Established
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
-                </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="images/client-2.png" alt="" class="img-1">
-                    <img src="images/client-2-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Blished
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
-                </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="images/client-1.png" alt="" class="img-1">
-                    <img src="images/client-1-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Establi
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="box">
-                <div class="detail-box">
-                  <p>
-                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem
-                  </p>
-                </div>
-                <div class="client_id">
-                  <div class="img-box">
-                    <img src="images/client-1.png" alt="" class="img-1">
-                    <img src="images/client-1-white.png" alt="" class="img-2">
-                  </div>
-                  <div class="name">
-                    <h6>
-                      Establi
-                    </h6>
-                    <p>
-                      by the readable
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- end client section -->
-
-  <!-- contact section -->
-
-  <section class="contact_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Request A call back
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-8 mx-auto">
-          <div class="form_container">
-            <form>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="inputName4" placeholder="Name ">
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" id="inputSubject4" placeholder="Phone">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col">
-                  <input type="email" class="form-control" id="inputEmail4" placeholder="Email id">
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="inputMessage" placeholder="Message">
-              </div>
-              <div class="d-flex justify-content-center">
-                <button type="submit" class="">Send</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div class="contact_items">
-
-        <a href="">
-          <div class="img-box">
-            <img src="images/location.png" alt="">
-          </div>
-          <h6>
-            Loram Ipusum ari
-            lo elisant na
-          </h6>
-        </a>
-        <a href="">
-          <div class="img-box">
-            <img src="images/call.png" alt="">
-          </div>
-          <h6>
-            (+12 1234456789)
-          </h6>
-        </a>
-        <a href="">
-          <div class="img-box">
-            <img src="images/mail.png" alt="">
-          </div>
-          <h6>
-            demo@gmail.com
-          </h6>
-        </a>
-
-      </div>
-      <div class="social_container">
-        <div class="social-box">
-          <div>
-            <a href="">
-              <img src="images/fb.png" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="">
-              <img src="images/twitter.png" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="">
-              <img src="images/linkedin.png" alt="">
-            </a>
-          </div>
-          <div>
-            <a href="">
-              <img src="images/insta.png" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end contact section -->
-
-  <!-- map section -->
-
-  <section class="map_section">
-    <!-- map section -->
-    <div class="map_container">
-      <div class="map-responsive">
-        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
-      </div>
-    </div>
-    <!-- end map section -->
-  </section>
-
-
-  <!-- end map section -->
-
-  <!-- footer section -->
-  <footer class="container-fluid footer_section">
-    <p>
-      Copyright &copy; 2020 All Rights Reserved. Design by
-      <a href="https://html.design/">Free Html Templates</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
-    </p>
-  </footer>
-  <!-- footer section -->
-
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <script src="js/custom.js"></script>
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="../qrcodes/js/qrcode-reader.min.js?v=20190604"></script>
-  
-  <script>
+    <script>
     $(function(){
-  
-      // overriding path of JS script and audio 
-      $.qrCodeReader.jsQRpath = "../qrcodes/js/jsQR/jsQR.min.js";
-      $.qrCodeReader.beepPath = "../qrcodes/audio/beep.mp3";
-  
-      // read or follow qrcode depending on the content of the target input
-      $("#openreader-single2").qrCodeReader({callback: function(code) {
+
+        // overriding path of JS script and audio 
+        $.qrCodeReader.jsQRpath = "../qrcodes/js/jsQR/jsQR.min.js";
+        $.qrCodeReader.beepPath = "../qrcodes/audio/beep.mp3";
+
+        // read or follow qrcode depending on the content of the target input
+        $("#openreader-single2").qrCodeReader({callback: function(code) {
         if (code) {
-          window.location.href = code;
+            window.location.href = code;
         }  
-      }}).off("click.qrCodeReader").on("click", function(){
+        }}).off("click.qrCodeReader").on("click", function(){
         var qrcode = $("#single2").val().trim();
         if (qrcode) {
-          window.location.href = qrcode;
+            window.location.href = qrcode;
         } else {
-          $.qrCodeReader.instance.open.call(this);
+            $.qrCodeReader.instance.open.call(this);
         }
-      });
-  
-    });
-  
-  </script>
+        });
 
+    });
+
+    </script>
+    
+    <header class="foi-header landing-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light foi-navbar">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/images/logo.svg" alt="FOI">
+                </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="features.html">Features</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pages</a>
+                            <div class="dropdown-menu" aria-labelledby="pagesMenu">
+                                <a class="dropdown-item" href="blog.html">Blog</a>
+                                <a class="dropdown-item" href="login.html">Login</a>
+                                <a class="dropdown-item" href="register.html">Register</a>
+                                <a class="dropdown-item" href="faq.html">FAQ</a>
+                                <a class="dropdown-item" href="404.html">404</a>
+                                <a class="dropdown-item" href="careers.html">Careers</a>
+                                <a class="dropdown-item" href="blog-single.html">Single blog</a>
+                                <a class="dropdown-item" href="privacy-policy.html">Privacy policy</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">contact</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mt-2 mt-lg-0">
+                        <li class="nav-item mr-2 mb-3 mb-lg-0">
+                            <a class="btn btn-secondary" href="register.html">Sign up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn btn-secondary" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="header-content">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h1>Great app that makes your life awesome</h1>
+                        <p class="text-dark">He has led a remarkable campaign, defying the traditional mainstream parties courtesy of his En Marche! movement.</p>
+                        <button class="btn btn-primary mb-4">Get Started</button>
+                        <div class="my-2">
+                            <p class="header-app-download-title">GET OUR MOBILE APP</p>
+                        </div>
+                        <div>
+                            <button class="btn btn-app-download mr-2"><img src="assets/images/ios.svg" alt="App store"></button>
+                            <button class="btn btn-app-download"><img src="assets/images/android.svg" alt="play store"></button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="assets/images/app_1.png" alt="app" width="388px" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="py-5 mb-5">
+        <div class="container">
+            <h2 class="section-title">Application Features</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Secure Data</h5>
+                    <p class="text-dark">No matter what kind of home you have to share, you can increase your earnings.</p>
+                    <p class="mb-5"><a href="#!" class="text-primary mb-5">Find out More</a></p>
+                    <h5>Fully functional</h5>
+                    <p class="text-dark">No matter what kind of home you have to share, you can increase your earnings.</p>
+                    <p class="mb-5"><a href="#!" class="text-primary mb-5">Find out More</a></p>
+                </div>
+                <div class="col-lg-4 mb-3 mb-lg-0">
+                    <h5>Live Chat</h5>
+                    <p class="text-dark">No matter what kind of home you have to share, you can increase your earnings.</p>
+                    <p class="mb-5"><a href="#!" class="text-primary mb-5">Find out More</a></p>
+                    <h5>Powerful dashboard</h5>
+                    <p class="text-dark">No matter what kind of home you have to share, you can increase your earnings.</p>
+                    <p class="mb-5"><a href="#!" class="text-primary mb-5">Find out More</a></p>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-gray font-os font-weight-semibold">Trusted by the world's best</h6>
+                    <div id="landingClientCarousel" class="carousel slide landing-client-carousel" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/slack.svg" alt="Slack" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/spotify.svg" alt="Spotify" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/paypal.svg" alt="Paypal" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/amazon.svg" alt="Amazon" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/google.svg" alt="Google" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/samsung.svg" alt="Samsung" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/slack.svg" alt="Slack" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/spotify.svg" alt="Spotify" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/paypal.svg" alt="Paypal" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/amazon.svg" alt="Amazon" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/google.svg" alt="Google" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/samsung.svg" alt="Samsung" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-flex flex-wrap justify-content-center">
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/slack.svg" alt="Slack" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/spotify.svg" alt="Spotify" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/paypal.svg" alt="Paypal" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/amazon.svg" alt="Amazon" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/google.svg" alt="Google" class="img-fluid">
+                                    </div>
+                                    <div class="clients-logo">
+                                        <img src="assets/images/clients/samsung.svg" alt="Samsung" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#landingClientCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#landingClientCarousel" data-slide-to="1"></li>
+                            <li data-target="#landingClientCarousel" data-slide-to="2"></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5 mb-md-0">
+                    <img src="assets/images/app_2.png" alt="special offers" class="img-fluid" width="492px">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="section-title">Get special offers on the things you love</h2>
+                    <p class="mb-5">He has led a remarkable campaign, defying the traditional mainstream parties courtesy of his En Marche! movement. For many, however, the campaign has become less about backing Macron and instead about voting against Le Pen, the National Front candidate.</p>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="media landing-feature">
+                                <span class="landing-feature-icon"></span>
+                                <div class="media-body">
+                                    <h5>Essentials</h5>
+                                    <p>All the basics for businesses that are just getting started.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media landing-feature">
+                                <span class="landing-feature-icon"></span>
+                                <div class="media-body">
+                                    <h5>Premium</h5>
+                                    <p>All the basics for businesses that are just getting started.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="media landing-feature">
+                                <span class="landing-feature-icon"></span>
+                                <div class="media-body">
+                                    <h5>Standard</h5>
+                                    <p>All the basics for businesses that are just getting started.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 mb-5">
+        <div class="container">
+            <h2>Choose the plan that’s right for yor business</h2>
+            <p class="text-muted mb-5">Thank you for your very professional and prompt response. I wished I had found you before </p>
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="card pricing-card border-warning">
+                        <div class="card-body">
+                            <h3 class="mb-1">Starter</h3>
+                            <h3 class="mb-1 text-warning">Free</h3>
+                            <p class="payment-period">Per month</p>
+                            <p class="mb-4">Thank you for your very professional and prompt response.</p>
+                            <button class="btn btn-outline-warning btn-rounded">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card pricing-card border-primary active">
+                        <div class="card-body">
+                            <h3>Popular</h3>
+                            <h3 class="text-primary">$23.00</h3>
+                            <p class="payment-period">Per month</p>
+                            <p class="mb-4">Thank you for your very professional and prompt response.</p>
+                            <button class="btn btn-primary btn-rounded">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <div class="card pricing-card border-success">
+                        <div class="card-body">
+                            <h3>Enterprise</h3>
+                            <h3 class="text-success">$40.00</h3>
+                            <p class="payment-period">Per month</p>
+                            <p class="mb-4">Thank you for your very professional and prompt response.</p>
+                            <button class="btn btn-outline-success btn-rounded">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 mb-5">
+        <div class="container">
+            <h2>Satisfied Users</h2>
+            <p class="text-muted mb-5">Thank you for your very professional and prompt response. I wished I had found you before </p>
+            <div class="row">
+                <div class="col-md-4 foi-review mb-5 mb-md-0">
+                    <div class="foi-rating">
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                    </div>
+                    <h5 class="foi-review-heading">Great support available</h5>
+                    <p class="foi-review-content">Thank you for your very professional and prompt response. I wished I had found you before I spent money on a competitors theme.</p>
+                    <div class="media foi-review-user">
+                        <img src="assets/images/avatar/avatar_11.jpg" alt="user" class="avatar">
+                        <div class="media-body">
+                            <h6 class="mb-0">Amarachi Nkechi</h6>
+                            <p>UX Designer</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 foi-review mb-5 mb-md-0">
+                    <div class="foi-rating">
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                    </div>
+                    <h5 class="foi-review-heading">Great support available</h5>
+                    <p class="foi-review-content">Thank you for your very professional and prompt response. I wished I had found you before I spent money on a competitors theme.</p>
+                    <div class="media foi-review-user">
+                        <img src="assets/images/avatar/avatar_12.jpg" alt="user" class="avatar">
+                        <div class="media-body">
+                            <h6 class="mb-0">Margje Jutten</h6>
+                            <p>Developer</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-4 foi-review mb-5 mb-md-0">
+                    <div class="foi-rating">
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                        <span class="fas fa-star checked"></span>
+                    </div>
+                    <h5 class="foi-review-heading">Great support available</h5>
+                    <p class="foi-review-content">Thank you for your very professional and prompt response. I wished I had found you before I spent money on a competitors theme.</p>
+                    <div class="media foi-review-user">
+                        <img src="assets/images/avatar/avatar_13.jpg" alt="user" class="avatar">
+                        <div class="media-body">
+                            <h6 class="mb-0">Monica Böttger</h6>
+                            <p>UX Designer</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 mb-5">
+        <div class="container">
+            <h2>FAQ</h2>
+            <p class="section-subtitle">Frequently Asked Questions</p>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqOneTitle">
+                            <a href="#faqOneCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">What is Foi app?</h6> <i class="far fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqOneCollapse" class="collapse" aria-labelledby="faqOneTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqTwoTitle">
+                            <a href="#faqTwoCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">Why should I use Foi app?</h6> <i class="far fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqTwoCollapse" class="collapse" aria-labelledby="faqTwoTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqThreeTitle">
+                            <a href="#faqThreeCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">How can I use Foi app?</h6> <i class="far fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqThreeCollapse" class="collapse" aria-labelledby="faqThreeTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqFourTitle">
+                            <a href="#faqFourCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">Who will see my updates?</h6> <i class="far fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqFourCollapse" class="collapse" aria-labelledby="faqFourTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqFiveTitle">
+                            <a href="#faqFiveCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">Can people see my connections?</h6> <i class="far fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqFiveCollapse" class="collapse" aria-labelledby="faqFiveTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card mb-3 landing-faq-card">
+                        <div class="card-header bg-white" id="faqSixTitle">
+                            <a href="#faqSixCollapse" class="d-flex align-items-center" data-toggle="collapse">
+                                <h6 class="mb-0">Being a user, what all rights I have?</h6> <i class="far fa-plus-square ml-auto"></i>
+                            </a>
+                        </div>
+                        <div id="faqSixCollapse" class="collapse" aria-labelledby="faqSixTitle">
+                            <div class="card-body">
+                                <p class="mb-0 text-gray">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="foi-footer text-white">
+        <div class="container">
+            <div class="row footer-content">
+                <div class="col-xl-6 col-lg-7 col-md-8">
+                    <h2 class="mb-0">Do you want to know more or just have a question? write to us.</h2>
+                </div>
+                <div class="col-md-4 col-lg-5 col-xl-6 py-3 py-md-0 d-md-flex align-items-center justify-content-end">
+                    <a href="contact.html" class="btn btn-danger btn-lg">Contact form</a>
+                </div>
+            </div>
+            <div class="row footer-widget-area">
+                <div class="col-md-3">
+                    <div class="py-3">
+                        <img src="assets/images/logo-white.svg" alt="FOI">
+                    </div>
+                    <p class="font-os font-weight-semibold mb3">Get our mobile app</p>
+                    <div>
+                        <button class="btn btn-app-download mr-2"><img src="assets/images/ios.svg" alt="App store"></button>
+                        <button class="btn btn-app-download"><img src="assets/images/android.svg" alt="play store"></button>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                    <nav>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">My tasks</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Projects</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Edit profile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Activity</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                    <nav>
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Careers <span class="badge badge-pill badge-secondary ml-3">Hiring</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#!" class="nav-link">Shop with us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-3 mt-3 mt-md-0">
+                    <p>
+                        &copy; foi. 2020 <a href="https://www.bootstrapdash.com" target="_blank" rel="noopener noreferrer" class="text-reset">BootstrapDash</a>.
+                    </p>
+                    <p>All rights reserved.</p>
+                    <nav class="social-menu">
+                        <a href="#!"><img src="assets/images/facebook.svg" alt="facebook"></a>
+                        <a href="#!"><img src="assets/images/instagram.svg" alt="instagram"></a>
+                        <a href="#!"><img src="assets/images/twitter.svg" alt="twitter"></a>
+                        <a href="#!"><img src="assets/images/youtube.svg" alt="youtube"></a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/vendors/jquery/jquery.min.js"></script>
+    <script src="assets/vendors/popper.js/popper.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
