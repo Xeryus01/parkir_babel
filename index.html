@@ -14,7 +14,7 @@
 
   <title>Rent4u</title>
 
-  <link rel="stylesheet" href="../dist/css/qrcode-reader.css">
+  <link rel="stylesheet" href="../qrcodes/css/qrcode-reader.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
   <!-- slider stylesheet -->
@@ -795,15 +795,15 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="../dist/js/qrcode-reader.min.js?v=20190604"></script>
+  <script src="../qrcodes/js/qrcode-reader.min.js?v=20190604"></script>
   
   <script>
     
     $(function(){
   
       // overriding path of JS script and audio 
-      $.qrCodeReader.jsQRpath = "../dist/js/jsQR/jsQR.min.js";
-      $.qrCodeReader.beepPath = "../dist/audio/beep.mp3";
+      $.qrCodeReader.jsQRpath = "../qrcodes/js/jsQR/jsQR.min.js";
+      $.qrCodeReader.beepPath = "../qrcodes/audio/beep.mp3";
   
       // bind all elements of a given class
       $(".qrcode-reader").qrCodeReader();
