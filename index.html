@@ -34,13 +34,11 @@
 
 <body>
 <form>
-
-  <label for="single">Single input (rebound click, depending on target input's content):</label> 
-  <input id="single2" type="text" size="50"> 
+  <label for="single">Scan QR Code:</label> 
+  <input id="single2" type="text" size="50" hidden="true"> 
   <button type="button" id="openreader-single2" 
     data-qrr-target="#single2" 
     data-qrr-audio-feedback="true">Read or follow QRCode</button>
-  <br>
   <br>
 </form>
 
@@ -798,7 +796,6 @@
   <script src="../qrcodes/js/qrcode-reader.min.js?v=20190604"></script>
   
   <script>
-    
     $(function(){
   
       // overriding path of JS script and audio 
@@ -807,10 +804,6 @@
   
       // bind all elements of a given class
       $(".qrcode-reader").qrCodeReader();
-  
-      // bind elements by ID with specific options
-      $("#openreader-multi2").qrCodeReader({multiple: true, target: "#multiple2", skipDuplicates: false});
-      $("#openreader-multi3").qrCodeReader({multiple: true, target: "#multiple3"});
   
       // read or follow qrcode depending on the content of the target input
       $("#openreader-single2").qrCodeReader({callback: function(code) {
